@@ -1,12 +1,23 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-import { Sequelize } from 'sequelize';
+import { Sequelize, Options } from 'sequelize';
 import { UserFactory } from './user.js';
 import { TicketFactory } from './ticket.js';
 
+const dburl_options: Options = {
+  host: "localhost",
+  dialect: "postgres",
+  dialectOptions: {
+    decimalNumbers: true,
+    ssl: {
+      require: true,
+      rejectUnauthorized: false, // Important for self-signed certificates
+    },
+  },
+};
 const sequelize = process.env.DB_URL
-  ? new Sequelize(process.env.DB_URL)
+  ? new Sequelize(process.env.DB_URL, dburl_options)
   : new Sequelize(process.env.DB_NAME || '', process.env.DB_USER || '', process.env.DB_PASSWORD, {
       host: 'localhost',
       dialect: 'postgres',
