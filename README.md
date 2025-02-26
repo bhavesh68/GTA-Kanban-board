@@ -30,4 +30,4 @@ N/A
 MIT
 
 ## Image
-![Alt text](Image/image.png)
+![Alt text](asset/kanban1.png)
