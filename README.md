@@ -31,3 +31,4 @@ MIT
 
 ## Image
 ![Alt text](asset/kanban1.png)
+![Alt text](asset/kanban2.png)
