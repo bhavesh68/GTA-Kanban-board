@@ -30,5 +30,5 @@ N/A
 MIT
 
 ## Image
-![Alt text](asset/kanban1.png)
-![Alt text](asset/kanban2.png)
+![Alt text](assets/kanban1.png)
+![Alt text](assets/kanban2.png)
